@@ -12,12 +12,18 @@ const displayMeals = foods => {
 
     foods.forEach(food => {
         const foodDiv = document.createElement('div');
+        foodDiv.addEventListener("click", function(){
+            const foodMoreInfo = document.getElementById('more-info');
+            foodMoreInfo.innerHTML = `
+            <h3>Meal Name: ${food.strMeal}</h3>
+            <p>Meal ID: ${food.idMeal}</p>
+            <img src="${food.strMealThumb}">
+            `
+        })
         foodDiv.className = 'food-div';
-        // const foodImage = document.createElement('div');
-        // foodDiv.innerText = food.strMeal;
-        // foodContainer.appendChild(foodDiv);
         const mealInfo = `
         <h5>${food.strMeal}</h5>
+        <img src="${food.strMealThumb}">
         `
         foodDiv.innerHTML = mealInfo;
         foodContainer.appendChild(foodDiv);
