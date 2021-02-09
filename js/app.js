@@ -12,7 +12,14 @@ const displayMeals = foods => {
 
     foods.forEach(food => {
         const foodDiv = document.createElement('div');
-        foodDiv.innerText = food.strMeal;
+        foodDiv.className = 'food-div';
+        // const foodImage = document.createElement('div');
+        // foodDiv.innerText = food.strMeal;
+        // foodContainer.appendChild(foodDiv);
+        const mealInfo = `
+        <h5>${food.strMeal}</h5>
+        `
+        foodDiv.innerHTML = mealInfo;
         foodContainer.appendChild(foodDiv);
     });
 }

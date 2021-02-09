@@ -8,3 +8,9 @@
     border-radius: 10px;
     border: 1px solid gray;
 }
+.food-div{
+    border: 1px solid lightblue;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+}
